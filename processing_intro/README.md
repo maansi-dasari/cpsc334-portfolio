@@ -20,7 +20,7 @@ The file within this directory was just my attempt to show how wonderful process
 
 If you want to test it out, then you can open the file in Processing, press run, and voila! There should be an window that pops up that has similar functionality to this GIF when you mouse over it:
 
-![Processing Demo GIF](http://www.giphy.com/gifs/0Sn2gy1W4yRJSVsR2k)
+![Processing Demo GIF](https://media.giphy.com/media/0Sn2gy1W4yRJSVsR2k/giphy.gif)
 
 The window currently matches the aspect ratio that the projector screens have (I believe Professor Petersen said in class that the projectors mapped to a 4000x768 screen?) just as a sort of visual starting point.
 

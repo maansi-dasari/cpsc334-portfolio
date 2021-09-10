@@ -38,9 +38,7 @@ void mouseMoved() {
 }
 
 void mousePressed() {
-  println("CLICKED!");
   if (screenCoords == null) {
-    println("first click");
     // Create a new JSON object to store coordinates
     screenCoords = new JSONObject();
     // Store clicked position as top left coordinate
@@ -53,7 +51,6 @@ void mousePressed() {
     screenCoords.setInt("bottom_right_y", mouseY);
     // Append screen coordinates to array of all screens
     screenArray.append(screenCoords);
-    println(screenArray.size());
     // Reset coordinates for next screen
     screenCoords = null;
   }

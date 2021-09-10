@@ -1,13 +1,14 @@
 
-int screenHeight = 192;
-int screenWidth = 1000;
+int screenHeight = 768;
+int screenWidth = 8160;
 
 void settings() {
-  size(screenWidth, screenHeight);
   smooth();
 }
 
 void setup() {
+  surface.setSize(screenWidth, screenHeight);
+  surface.setLocation(1024, 0);
   edge1.x = 250;
   edge1.y = 250;
 }
@@ -26,4 +27,9 @@ void draw() {
 
 void mouseMoved() {
   edge1.x = mouseX;
+}
+
+void mouseClicked() {
+  println(mouseX);
+  println(mouseY);
 }

@@ -8,12 +8,19 @@ We chose to use Processing to develop the UI and store the pixel values in a JSO
 
 ## Semi-Automatic Program: User Interface
 
-TODO: @Mary include in description:
+In an attempt to align with the task's permission that the program could be semi-automatic, meaning requiring human input, we designed a User Interface in order to obtain the pixel to physical space mapping.
 
-- Video of the demo performed in CCAM
-- Explanation of the console prompts and general workflow
-- Mentioning that the UI directs the user to have the numbers in ascending order from left to right
-- Hotkeys throughout the module
+Through console prompts in the original Processing Sketch window, the user is instructed to click each of the available screens' top left and bottom right corner. These data points provide valuable information as they can be manipulated with each other to obtain each screen's height, width, and position.
+
+The console also instructs the user to address the screens in order of left to right. In order to provide some clarity on this point, the number of the corresponding screen is displayed. For example, the far left screen will display 0, and the rightmost (in Leeds) will display 5.
+
+After completing a screen by drawing its rectangle, the user must either press [y] to continue to the next rectangle or [n] to redraw the current rectangle in case of a mistake. The console reminds the user of these hotkeys throughout the workflow.
+
+Finally, the user can press [s] to save the top left and bottom right corner pixel values to a JSON file when they finish mapping each screen and the screens display their corresponding numbers in ascending order from left to right.
+
+### Click on the video thumbnail below to view a demo of the User Interface:
+
+[![Watch the video](https://img.youtube.com/vi/YbrQDtN1v3M/maxresdefault.jpg)](https://youtu.be/YbrQDtN1v3M)
 
 ## File Output: Pixels to Physical Space Mapping
 

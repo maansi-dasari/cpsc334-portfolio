@@ -18,9 +18,9 @@ After completing a screen by drawing its rectangle, the user must either press [
 
 Finally, the user can press [s] to save the top left and bottom right corner pixel values to a JSON file when they finish mapping each screen and the screens display their corresponding numbers in ascending order from left to right.
 
-### Click on the video thumbnail below to view a demo of the User Interface:
+### UI Demo in Leeds:
+https://user-images.githubusercontent.com/57645852/133021774-980c5b18-9f20-4ac3-9738-62a9d3f2c837.mp4
 
-[![Watch the video](https://img.youtube.com/vi/YbrQDtN1v3M/maxresdefault.jpg)](https://youtu.be/YbrQDtN1v3M)
 
 ## File Output: Pixels to Physical Space Mapping
 

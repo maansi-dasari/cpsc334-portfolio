@@ -24,11 +24,60 @@ https://user-images.githubusercontent.com/57645852/133021774-980c5b18-9f20-4ac3-
 
 ## File Output: Pixels to Physical Space Mapping
 
-TODO: @Maansi include in this description
+In order to describe the pixel space to physical screen mapping, we labeled each physical screen with the pixel coordinates of its top left and bottom right corners. From these two points, it's possible to calculate the size and rotation of each screen. Since the user inputs these coordinates for each screen starting from left to right, the output file preserves this ordering of the screens.
 
-- Explanation of the file format
-- Diagram of sample JSON points and where they exist in the physical space
-- Final results of the mapping program (either screen_coords or screen_config, but preferably screen_coords since those numbers are taken directly from the projector)
+These pixel coordinate values are stored in a JSON file (screen_coords.json) containing an array of objects, one for each screen. The order of screens in the array goes from left to right in physical space. Each screen object in the array contains the x and y pixel coordinates for the physical screen's top left and bottom right corners. So, for example, if a user wanted to display something on the leftmost screen, they would display content between the pixel coordinates stored at index 0 in the array. A sample trial on the Leeds room projectors led to the following results across the 6 screens, in JSON format:
+
+[
+
+  {
+    "bottom_right_x": 9182,
+    "bottom_right_y": 10,
+    "top_left_y": 761,
+    "top_left_x": 7831
+  },
+  
+  {
+    "bottom_right_x": 7814,
+    "bottom_right_y": 8,
+    "top_left_y": 760,
+    "top_left_x": 6473
+  },
+  
+  {
+    "bottom_right_x": 6456,
+    "bottom_right_y": 9,
+    "top_left_y": 723,
+    "top_left_x": 5111
+  },
+  
+  {
+    "bottom_right_x": 5101,
+    "bottom_right_y": 5,
+    "top_left_y": 721,
+    "top_left_x": 3740
+  },
+  
+  {
+    "bottom_right_x": 2364,
+    "bottom_right_y": 11,
+    "top_left_y": 737,
+    "top_left_x": 1031
+  },
+  
+  {
+    "bottom_right_x": 3739,
+    "bottom_right_y": 0,
+    "top_left_y": 741,
+    "top_left_x": 2388
+  }
+  
+]
+
+The above numbers are taken directly from user input (mouse clicking) so are slightly different from the exact mapping. They represent the following physical mapping of pixels to screens (pixel values are shown in red as x,y pairs):
+
+<img width="732" alt="Screen Shot 2021-09-13 at 12 36 19 AM" src="https://user-images.githubusercontent.com/16601007/133024689-a3c693fb-061c-4813-b77c-5a4ba1cbe1ef.png">
+
 
 ## Use Case: Video Processing Module
 

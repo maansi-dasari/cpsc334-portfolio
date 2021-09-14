@@ -1,5 +1,14 @@
 # Assignment 1: Leeds Studio Projector Configuration System
 
+## How to Use
+
+1. Download the `projector_setup` folder to your local computer.
+2. Open Processing on your computer, and go to the File > Open tab on your menu bar to navigate to `projector_setup/projector_setup.pde` and click on it
+3. Press the `Play` button in the upper left corner. The entire screen, including the desktop and monitor, should turn white.
+4. Starting with the leftmost screen, click on the top left and bottom right corners, in that order. After the screen has been (ideally) covered in a colored rectangle, press `y` on your keyboard to proceed or `n` to redraw the rectangle. You will not be able to come back and change the rectangle if you press `y`.
+5. Continue this process so that the numbers on the rectangles appear in ascending order from left to right on the screens, pressing `y` to continue from rectangle to rectangle.
+6. Once you are finished, and every projector screen has a number on it and the screen numbers are organized in ascending order, press `s`. This will save the x and y coordinates of the corners you pressed to a JSON file `screen_coords.json` in the `projector_setup` directory.
+
 ## Overview
 
 For this assignment, we were tasked with creating a program that would create a pixel configuration for the projector set up in Leeds Studio. This involved creating a mapping of the 6 projector screens pixel values to the physical space.
@@ -37,42 +46,42 @@ These pixel coordinate values are stored in a JSON file (screen_coords.json) con
     "top_left_y": 761,
     "top_left_x": 7831
   },
-  
+
   {
     "bottom_right_x": 7814,
     "bottom_right_y": 8,
     "top_left_y": 760,
     "top_left_x": 6473
   },
-  
+
   {
     "bottom_right_x": 6456,
     "bottom_right_y": 9,
     "top_left_y": 723,
     "top_left_x": 5111
   },
-  
+
   {
     "bottom_right_x": 5101,
     "bottom_right_y": 5,
     "top_left_y": 721,
     "top_left_x": 3740
   },
-  
+
   {
     "bottom_right_x": 2364,
     "bottom_right_y": 11,
     "top_left_y": 737,
     "top_left_x": 1031
   },
-  
+
   {
     "bottom_right_x": 3739,
     "bottom_right_y": 0,
     "top_left_y": 741,
     "top_left_x": 2388
   }
-  
+
 ]
 ```
 

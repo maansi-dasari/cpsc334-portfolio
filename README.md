@@ -4,7 +4,7 @@
 
 For this assignment, we were tasked with creating a program that would create a pixel configuration for the projector set up in Leeds Studio. This involved creating a mapping of the 6 projector screens pixel values to the physical space.
 
-We chose to use Processing to develop the UI and store the pixel values in a JSON file upon completion of the user's mapping. Python was then used with various libraries (TODO: specify Python libraries). Below are further details about the UI, an explanation of the mapping of pixels to physical space, and a use case for these values in the form of a video processing module.
+We chose to use Processing to develop the UI and store the pixel values in a JSON file upon completion of the user's mapping. Python was then used with the ffmpeg library. Below are further details about the UI, an explanation of the mapping of pixels to physical space, and a use case for these values in the form of a video processing module.
 
 ## Semi-Automatic Program: User Interface
 
@@ -19,8 +19,8 @@ After completing a screen by drawing its rectangle, the user must either press [
 Finally, the user can press [s] to save the top left and bottom right corner pixel values to a JSON file when they finish mapping each screen and the screens display their corresponding numbers in ascending order from left to right.
 
 ### UI Demo in Leeds:
-https://user-images.githubusercontent.com/57645852/133021774-980c5b18-9f20-4ac3-9738-62a9d3f2c837.mp4
 
+https://user-images.githubusercontent.com/57645852/133021774-980c5b18-9f20-4ac3-9738-62a9d3f2c837.mp4
 
 ## File Output: Pixels to Physical Space Mapping
 
@@ -28,6 +28,7 @@ In order to describe the pixel space to physical screen mapping, we labeled each
 
 These pixel coordinate values are stored in a JSON file (screen_coords.json) containing an array of objects, one for each screen. The order of screens in the array goes from left to right in physical space. Each screen object in the array contains the x and y pixel coordinates for the physical screen's top left and bottom right corners. So, for example, if a user wanted to display something on the leftmost screen, they would display content between the pixel coordinates stored at index 0 in the array. A sample trial on the Leeds room projectors led to the following results across the 6 screens, in JSON format:
 
+```
 [
 
   {
@@ -73,16 +74,20 @@ These pixel coordinate values are stored in a JSON file (screen_coords.json) con
   }
   
 ]
+```
 
 The above numbers are taken directly from user input (mouse clicking) so are slightly different from the exact mapping. They represent the following physical mapping of pixels to screens (pixel values are shown in red as x,y pairs):
 
 <img width="732" alt="Screen Shot 2021-09-13 at 12 36 19 AM" src="https://user-images.githubusercontent.com/16601007/133024689-a3c693fb-061c-4813-b77c-5a4ba1cbe1ef.png">
 
-
 ## Use Case: Video Processing Module
 
-TODO: @Cody include in description
+After screen resolution, rotation, order, and origin data is collected, `process_video.py` can be used to reformat a video to these specifications. This module fully utilizes the flexibility of the data collected by the Processing module to accomplish a dynamic system for adapting content to complex display setups. **Warning**: this currently requires 3 encodes, therefore a low CRF and a slow preset should be specified to maintain video quality. Usage instructions can be reached using the help flag `-h` as in `process_video.py -h`.
 
-- Explanation of how the Processing script output can be used to translate videos to be properly displayed across the projectors
-- Identify various libraries used
-- Talk about program being dynamic and not only specific to this projector set up
+Many options are available for the `process_video.py` script including, encode crf, encode preset, display padding, forced rotation, crop-based or stretch-based aspect ratio compensation, splitting into multiple videos for each display, and debugging flags for not encoding and log verbosity.
+
+As utilized, the Python package [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) provides bindings on the ffmpeg binary developed by Fabrice Bellard and the FFmpeg Community, as licensed under the [GNU Lesser General Public License (LGPL) version 2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html).
+
+### Process Video Demo in Leeds:
+
+<placeholder>

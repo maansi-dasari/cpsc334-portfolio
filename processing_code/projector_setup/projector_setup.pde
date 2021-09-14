@@ -32,7 +32,6 @@ JSONObject screenCoords = null;
 
 void setup() {
   fullScreen(0);
-  println(height);
   
   // Create JSON array to hold coordinates for each screen
   screenArray = new JSONArray();

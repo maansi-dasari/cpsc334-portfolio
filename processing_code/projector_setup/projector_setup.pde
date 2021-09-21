@@ -157,7 +157,7 @@ void keyTyped() {
     waitUserInput = false;
     println("\nPress the top left corner of Screen " + screenCount);
   } else if (key == 's') {
-    saveJSONArray(screenArray, "screen_coords.json");
+    saveJSONArray(screenArray, "../screen_coords.json");
     exit();
   }
     

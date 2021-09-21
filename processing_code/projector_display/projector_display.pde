@@ -22,7 +22,7 @@ ArrayList<Screen> screenList;
 int MIN_BLOBS = 8;
 int MAX_BLOBS = 15;
 
-float MAX_VELOCITY_SCALE = 0.002;
+float MAX_VELOCITY_SCALE = 0.005;
 float MAX_RADIUS_SCALE = 0.06;
 float MIN_RADIUS_SCALE = 0.03;
 
@@ -30,7 +30,7 @@ void setup() {
   fullScreen();
   
   // Load screen information from JSON file
-  JSONArray screens = loadJSONArray("screen_coords.json");
+  JSONArray screens = loadJSONArray("../screen_coords.json");
   
   screenList = new ArrayList<Screen>();
   // Create screen objects with coordinate information

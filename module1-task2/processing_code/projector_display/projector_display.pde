@@ -27,7 +27,7 @@ float MAX_RADIUS_SCALE = 0.06;
 float MIN_RADIUS_SCALE = 0.03;
 
 void setup() {
-  fullScreen();
+  fullScreen(0);
   
   // Load screen information from JSON file
   JSONArray screens = loadJSONArray("../screen_coords.json");

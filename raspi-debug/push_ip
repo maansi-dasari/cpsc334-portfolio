@@ -1,0 +1,10 @@
+#!/bin/bash
+sleep 15
+cd /home/pi/cpsc334-portfolio
+git pull
+rm /home/pi/cpsc334-portfolio/raspi-debug/ip.md
+date > /home/pi/cpsc334-portfolio/raspi-debug/ip.md
+hostname -I >> /home/pi/cpsc334-portfolio/raspi-debug/ip.md
+git add /home/pi/cpsc334-portfolio/raspi-debug/ip.md
+git commit -m "latest ip"
+git push

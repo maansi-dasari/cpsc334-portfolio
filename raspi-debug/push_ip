@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 15
+sleep 5
 cd /home/pi/cpsc334-portfolio
 git pull
 rm /home/pi/cpsc334-portfolio/raspi-debug/ip.md
